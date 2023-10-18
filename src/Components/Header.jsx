@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-secondary">
+    <Navbar expand="lg" className="bg-secondary fixed">
       <Container>
         <Navbar.Brand> <Link to={'/'} className='d-flex align-items-center' style={{textDecoration:'none',color:'white',fontw
-            :'bold'}}><i className="fa-solid fa-truck-fast" Style={{color:'#ffffff'}}></i>E-Cart</Link></Navbar.Brand>
+            :'bold'}}><i className="fa-solid fa-truck-fast"></i>E-Cart</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
