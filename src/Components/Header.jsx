@@ -3,9 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const wishlist = useSelector((state)=>state.wishlistReducer)
   return (
     <Navbar expand="lg" className="bg-secondary fixed">
       <Container>
@@ -18,7 +20,7 @@ function Header() {
                 <Link to={'/wishlist'} className='d-flex align-items-center' style={{textDecoration:'none',color:'white',fontw
             :'bold'}}>
                 <i className='fa-solid fa-heart text-danger me-2'></i>WishList
-                <Badge className='ms-2 rounded' bg='light'>10</Badge></Link>
+                <Badge className='ms-2 rounded' bg='light'>{wishlist.length}</Badge></Link>
             
             </Nav.Link>
             <Nav.Link className='btn btn border rounded ms-2'>
