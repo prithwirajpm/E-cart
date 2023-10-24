@@ -2,6 +2,7 @@ import React from 'react'
 import { Row, Col, Card, Button } from 'react-bootstrap'
 import { useDispatch } from 'react-redux';
 import useFetch from '../Hook/useFetch'
+import { addToCart } from '../Redux/cartSlice';
 import { addToWishlist } from '../Redux/wishlistSlice';
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
                   </Card.Text>
                   <div className='d-flex justify-content-between'>
                     <Button className='btn btn-light' onClick={()=>dispatch(addToWishlist(product))}><i class="fa-solid fa-heart text-danger"></i></Button>
-                    <Button className='btn btn-light'><i class="fa-solid fa-cart-plus text-success"></i></Button>
+                    <Button className='btn btn-light'  onClick={()=>dispatch(addToCart(product))}><i class="fa-solid fa-cart-plus text-success"></i></Button>
                   </div>
                 </Card.Body>
               </Card>
